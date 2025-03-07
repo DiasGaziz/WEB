@@ -1,55 +1,81 @@
-/* Общие стили */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to Main Content</a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <main id="main">
+        <h1>Welcome to the Car Enthusiasts' Hub</h1>
+        <p>Explore the world of automobiles, from classic models to modern supercars.</p>
+        <img src="car1.jpg" alt="A luxury sports car">
+    </main>
+</body>
+</html>
 
-/* Стили для ссылки "Перейти к основному содержанию" */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 10px;
-    background: #000;
-    color: #fff;
-    padding: 10px;
-    text-decoration: none;
-}
-.skip-link:focus {
-    top: 10px;
-}
+<!-- Gallery Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to Main Content</a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <main id="main">
+        <h1>Car Gallery</h1>
+        <div class="gallery">
+            <img src="car2.jpg" alt="Classic vintage car">
+            <img src="car3.jpg" alt="Modern electric car">
+            <img src="car4.jpg" alt="Off-road SUV">
+            <img src="car5.jpg" alt="Futuristic concept car">
+            <img src="car6.jpg" alt="High-speed race car">
+        </div>
+    </main>
+</body>
+</html>
 
-/* Навигация */
-nav {
-    display: inline-block;
-    width: 80%;
-    background-color: #2c3e50;
-    padding: 10px;
-}
-
-/* Стили для изображений внутри nav */
-nav img {
-    width: 10%;
-}
-
-/* Двухколоночная сетка */
-.grid {
-    display: grid;
-    grid-template-columns: 40% 40%;
-    justify-content: center;
-    align-items: center;
-    row-gap: 20px;
-}
-
-/* Стили только для изображений внутри grid */
-.grid img {
-    width: 100%;
-}
-
-/* Flex-контейнер */
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+<!-- About Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to Main Content</a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <main id="main">
+        <h1>About Us</h1>
+        <p>We are passionate about cars and love sharing knowledge about the automotive industry.</p>
+        <img src="car7.jpg" alt="A group of car enthusiasts">
+    </main>
+</body>
+</html>
