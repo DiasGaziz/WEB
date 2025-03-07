@@ -6,7 +6,7 @@
     <title>Image Preview</title>
     <style>
         #image {
-            width: 400px;
+            width: 500px;
             height: 300px;
             border: 2px solid black;
             display: flex;
@@ -16,12 +16,14 @@
             background-size: cover;
             background-position: center;
             font-size: 18px;
+            text-align: center;
         }
         .preview {
-            width: 100px;
+            width: 150px;
             height: 100px;
             margin: 10px;
             cursor: pointer;
+            border: 1px solid #333;
         }
     </style>
 </head>
@@ -29,9 +31,20 @@
 
     <div id="image">Hover over an image below to display here.</div>
 
-    <img class="preview" src="image1.jpg" alt="Image 1 description" onmouseover="upDate(this)" onmouseout="undo()">
-    <img class="preview" src="image2.jpg" alt="Image 2 description" onmouseover="upDate(this)" onmouseout="undo()">
-    <img class="preview" src="image3.jpg" alt="Image 3 description" onmouseover="upDate(this)" onmouseout="undo()">
+    <img class="preview" src="https://www.1zoom.me/big2/819/321881-svetik.jpg" 
+         alt="Car 1: Sporty Red Car" 
+         onmouseover="upDate(this)" 
+         onmouseout="undo()">
+
+    <img class="preview" src="https://hdpic.club/uploads/posts/2022-01/1643085409_1-hdpic-club-p-bugatti-super-sport-1.jpg" 
+         alt="Car 2: Bugatti Super Sport" 
+         onmouseover="upDate(this)" 
+         onmouseout="undo()">
+
+    <img class="preview" src="https://cs4.pikabu.ru/post_img/big/2014/06/11/6/1402470593_443138614.jpg" 
+         alt="Car 3: Classic Red Muscle Car" 
+         onmouseover="upDate(this)" 
+         onmouseout="undo()">
 
     <script>
         function upDate(previewPic) {
