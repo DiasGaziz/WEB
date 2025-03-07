@@ -3,22 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Image Preview</title>
+    <style>
+        #image {
+            width: 400px;
+            height: 300px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            background-size: cover;
+            background-position: center;
+            font-size: 18px;
+        }
+        .preview {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <a href="#main" class="skip-link">Skip to Main Content</a>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
-    <main id="main">
-        <h1>Welcome to the Car Enthusiasts' Hub</h1>
-        <p>Explore the world of automobiles, from classic models to modern supercars.</p>
-        <img src="https://www.1zoom.me/big2/819/321881-svetik.jpg" alt="A luxury sports car">
-    </main>
+
+    <div id="image">Hover over an image below to display here.</div>
+
+    <img class="preview" src="image1.jpg" alt="Image 1 description" onmouseover="upDate(this)" onmouseout="undo()">
+    <img class="preview" src="image2.jpg" alt="Image 2 description" onmouseover="upDate(this)" onmouseout="undo()">
+    <img class="preview" src="image3.jpg" alt="Image 3 description" onmouseover="upDate(this)" onmouseout="undo()">
+
+    <script>
+        function upDate(previewPic) {
+            console.log("Event triggered!");
+            console.log("Image source:", previewPic.src);
+            console.log("Image alt:", previewPic.alt);
+
+            let imageDiv = document.getElementById("image");
+            imageDiv.style.backgroundImage = `url('${previewPic.src}')`;
+            imageDiv.innerHTML = previewPic.alt;
+        }
+
+        function undo() {
+            let imageDiv = document.getElementById("image");
+            imageDiv.style.backgroundImage = "url('')";
+            imageDiv.innerHTML = "Hover over an image below to display here.";
+        }
+    </script>
+
 </body>
 </html>
